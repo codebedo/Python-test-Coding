@@ -1,5 +1,5 @@
 class StatsOfChar:
-    def __int__(self, char, puan):
+    def __init__(self, char, puan):
         self.char = char
         self.puan = puan
 
@@ -19,3 +19,5 @@ class StatsOfChar:
         print(f"{self.char}'un puanı: {self.puan} ve unvanı: {unvan}")
 
 
+k2 = StatsOfChar("Bedo", 2)
+k2.bilgi_göster()
