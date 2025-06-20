@@ -8,11 +8,14 @@ class character:
         print(f"Hello , ı am {self.name} and {self.age} years old")
 
 
+    def talk_back(self):
+        print(f"Hey  {self.name} whatsupp?")
+
+
 
 
 k1 = character("Bedo", 24)
 k1.say_hi()
+k1.talk_back()
 
 
-k2 = character("honey", 24)
-k2.say_hi()
