@@ -23,3 +23,7 @@ class char:
 b1 = char("Bedo" , 2)
 
 b1.bilgi_göster()
+
+b2 = char("Arda", 3)
+
+b2.bilgi_göster()
