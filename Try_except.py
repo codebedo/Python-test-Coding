@@ -5,4 +5,5 @@ try:
 except ZeroDivisionError:
     print("Something went wrong")
 
-    
+print("I am excecuting after the try clause")
+
