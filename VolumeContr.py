@@ -8,21 +8,22 @@ class volume:
     def volume_cont(self):
         print(f"hello {self.user} Please which one  {self.app}'tu you change the volume")
         print("Please enter the volume")
-        volume = int(input())
-        if self.uvolume > volume:
-            while volume <= self.uvolume:
-                volume -= 1
-                print(volume)
-                if volume == self.uvolume:
-                    break
+        target_volume = int(input())
+        current_volume = self.uvolume
+        if current_volume > target_volume:
+            while current_volume > target_volume:
+                current_volume -= 1
+                print(current_volume)
+
+        elif current_volume < target_volume:
+            while current_volume < target_volume:
+                current_volume += 1
+                print(current_volume)
+
         else:
-            while volume >= self.uvolume:
-                volume += 1
-                print(volume)
-                if volume == self.uvolume:
-                    break
+            print(f" Volume is already at desired {self.uvolume} level.")
 
 
 
-k1 = volume("insta", "bedo", 20)
+k1 = volume("insta", "bedo", 30)
 k1.volume_cont()
