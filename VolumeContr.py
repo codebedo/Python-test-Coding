@@ -7,12 +7,15 @@ class volume:
 
     def volume_cont(self):
         print(f"hello {self.user} Please which one  {self.app}'tu you change the volume")
-        
-        try:
-            print("Please enter the volume")
-            target_volume = int(input("Please enter a number"))
-        except ValueError:
-            print("Please enter a number")
+        while True:
+            try:
+                target_volume = int(input("Please enter a number"))
+                if 0 <= target_volume <= 100:
+                    break
+                else:
+                    print("Ses seviyesi 0-100 arasında olmalı :")
+            except ValueError:
+                print("Please enter a number")
         current_volume = self.uvolume
         if current_volume > target_volume:
             while current_volume > target_volume:
