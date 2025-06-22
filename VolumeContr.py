@@ -7,13 +7,22 @@ class volume:
 
     def volume_cont(self):
         print(f"hello {self.user} Please which one  {self.app}'tu you change the volume")
-        volume = input("Please wich level")
+        print("Please enter the volume")
+        volume = int(input())
         if self.uvolume > volume:
-            while self.uvolume <= self.volume:
+            while volume <= self.uvolume:
                 volume -= 1
-                print(self.volume)
+                print(volume)
+                if volume == self.uvolume:
+                    break
+        else:
+            while volume >= self.uvolume:
+                volume += 1
+                print(volume)
+                if volume == self.uvolume:
+                    break
 
 
 
-k1 = volume("insta", "bedo", "20")
+k1 = volume("insta", "bedo", 20)
 k1.volume_cont()
