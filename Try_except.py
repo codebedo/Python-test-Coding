@@ -1,13 +1,15 @@
-    x = 1
-    try:
-        print(5/x)
-    except ZeroDivisionError:
-        print("Something went wrong")
-    else:
-        print("I am the else clause")
-    finally:
-        print("I am the finally clause ")
+class FooError(Exception):
+    def __init__(self, message):
+        self.message = message
 
 
-    print("I am executing after the clause")
+    def foo(self):
+        print("bar")
 
+
+try:
+    raise FooError("This is the test error")
+except FooError as e:
+    e.foo()
+
+    
