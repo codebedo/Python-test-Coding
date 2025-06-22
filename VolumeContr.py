@@ -7,8 +7,12 @@ class volume:
 
     def volume_cont(self):
         print(f"hello {self.user} Please which one  {self.app}'tu you change the volume")
-        print("Please enter the volume")
-        target_volume = int(input())
+        
+        try:
+            print("Please enter the volume")
+            target_volume = int(input("Please enter a number"))
+        except ValueError:
+            print("Please enter a number")
         current_volume = self.uvolume
         if current_volume > target_volume:
             while current_volume > target_volume:
