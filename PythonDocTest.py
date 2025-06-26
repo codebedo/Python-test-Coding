@@ -20,7 +20,7 @@ def f(a, L=[]):
 print(f(1))
 print(f(2))
 print(f(3))"""
-
+"""
 
 def f_none(a, L=None):
     if L is None:
@@ -30,4 +30,7 @@ def f_none(a, L=None):
 
 print(f_none(5))
 print(f_none(7))
-print(f_none(8))
+print(f_none(8))"""
+
+def parrot(voltage, state='a stiff', action='voom', type='Norwgian Blue'):
+    print('__This parrot Wouldn ')
