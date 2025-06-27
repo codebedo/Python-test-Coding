@@ -1,24 +1,22 @@
 class Test:
-    def __init__(self, target: int, start: int)->None:
-        self.target = target
-        self.start = start
+    def __init__(self, name: str, title: str, id: int):
+        self.name = name
+        self.title = title
+        self.id = id
+        self.character = []
+
+    def add_character(self):
+        self.character.append(f"{self.name} , {self.title} ,{self.id}")
+
+    def show_all(self):
+        characters = self.character
+
+        for i in range(characters):
+            print(i)
+
+
+k1 = Test("bedo", "programmer", 1)
 
 
 
-    def for_loop(self):
-        starting = self.start
-        Target = self.target
-
-        for starting in range(Target):
-            print(self.start + 1)
-
-
-
-
-
-
-
-
-k1 = Test(10, 2)
-
-k1.for_loop()
+k1.show_all()
