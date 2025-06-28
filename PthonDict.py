@@ -59,3 +59,10 @@ for j  in d :
     print(d)
 
 
+li = [("Fruits", "Apple"), ("Fruits", "Banana"), ("Vegetables", "Carrot")]
+d = {}
+
+for k, item in li:
+    d.setdefault(k, []).append(item)
+
+print(d)
