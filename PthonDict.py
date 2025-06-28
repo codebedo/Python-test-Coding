@@ -24,7 +24,7 @@ df = pd.DataFrame(thisdict.items(), columns=["key", "Value"])
 
 print(df.to_string(index=False))
 """
-
+"""
 all_example = ['A,1,1', 'B,2,1', 'C,4,4', 'D,4,5']
 
 
@@ -42,3 +42,20 @@ def get_Example():
 
 
 print(lst)
+"""
+from collections import  defaultdict
+lst01 = {'one', 'two', 'three'}
+
+for i in lst01:
+    print(lst01)
+
+d = defaultdict(list)
+
+d[4].append('four')
+d[5].append('five')
+d[6].append('six')
+
+for j  in d :
+    print(d)
+
+
