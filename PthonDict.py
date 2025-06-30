@@ -34,7 +34,7 @@ lst = [
 
 ]
 
-"""
+
 
 thisdict = dict( name = "CodeBedo" , age="23", Title = "Developer")
 df = pd.DataFrame(thisdict.items(), columns=["key", "Value"])
@@ -47,7 +47,7 @@ thisdict01 = dict(job = "Developing", id = "2", Title ="Workiingface")
 df01 = pd.DataFrame(thisdict01.items(), columns=["key", "Value"])
 
 print(df01.to_string(index=True))
-"""
+
 attributes = 'A,B,C'
 def get_Example():
     for value in all_example:
@@ -55,7 +55,7 @@ def get_Example():
 
 
 print(lst)
-"""
+
 from collections import  defaultdict
 lst01 = {'one', 'two', 'three'}
 
@@ -84,6 +84,20 @@ li = [("Fruits", "Apple"), ("Fruits", "Banana"), ("Vegetables", "Carrot")]
 
 
 
+
+"""
+
+# Roll Back dictionary
+
+d1 ={'a': 1, 'b': 2, 'c': 3, 'd': 4}
+d2 = {}
+
+for key, value in d1.items():
+    d2[value] = key
+
+print(d1)
+
+print(d2)
 
 
 
