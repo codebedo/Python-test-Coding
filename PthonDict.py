@@ -122,3 +122,5 @@ for key , value in d5.items():
 
 print(d5)
 print(d6)
+
+print(d6.get(1))
