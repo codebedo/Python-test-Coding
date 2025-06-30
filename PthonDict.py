@@ -34,7 +34,14 @@ lst = [
 
 ]
 
+"""
 
+thisdict = dict( name = "CodeBedo" , age="23", Title = "Developer")
+df = pd.DataFrame(thisdict.items(), columns=["key", "Value"])
+
+print(df.to_string(index=False))
+
+"""
 attributes = 'A,B,C'
 def get_Example():
     for value in all_example:
@@ -66,3 +73,11 @@ for k, item in li:
     d.setdefault(k, []).append(item)
 
 print(d)
+
+li = [("Fruits", "Apple"), ("Fruits", "Banana"), ("Vegetables", "Carrot")]
+
+
+
+
+
+
