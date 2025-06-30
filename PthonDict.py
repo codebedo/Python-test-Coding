@@ -100,4 +100,25 @@ print(d1)
 print(d2)
 
 
+d3 = {'one': 1, 'two':2, 'three': 3}
+d4 = {}
 
+for key, value in d3.items():
+    d4[value] = key
+    print(d4)
+
+
+print(d3)
+print(d4)
+
+
+
+d5 = {'one': 1, 'two':2, 'three': 3}
+d6 = {}
+
+for key , value in d5.items():
+    d6[value] = key
+    print(d6)
+
+print(d5)
+print(d6)
