@@ -41,6 +41,12 @@ df = pd.DataFrame(thisdict.items(), columns=["key", "Value"])
 
 print(df.to_string(index=False))
 
+
+
+thisdict01 = dict(job = "Developing", id = "2", Title ="Workiingface")
+df01 = pd.DataFrame(thisdict01.items(), columns=["key", "Value"])
+
+print(df01.to_string(index=True))
 """
 attributes = 'A,B,C'
 def get_Example():
