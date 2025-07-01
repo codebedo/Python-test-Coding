@@ -33,7 +33,7 @@ else:
 
 
 def binarySearch(arr, low, high, x):
-
+    """
     if high >= low:
         mid = low + (high - low) // 2
 
@@ -51,6 +51,24 @@ def binarySearch(arr, low, high, x):
 
     else:
         return -1
+    """
+    if high >= low:
+        mid = low + (high -low) //2
+
+        # eğer sistediğimiz yani aradığımız değer direkt olark m,d se indexini döndür.
+        if arr[mid] == x:
+            return  mid
+
+        # eğer mid küçülse ortanca değerden o zmaan sağ tarafı görmezden gel ve sol tarafta ulaşana kadar midin değerini düşür
+
+        elif arr[mid] > x:
+            return binarySearch(arr, low, mid -1 ,x)
+
+        else:
+            return  binarySearch(arr, mid + 1, high, x)
+
+    else:
+        return -1
 
 
 # Driver Code
@@ -58,7 +76,7 @@ def binarySearch(arr, low, high, x):
 if __name__ == '__main__':
     arr = [2,3,4,10,40]
 
-    x = 40
+    x = 50
 
 
     # function call
