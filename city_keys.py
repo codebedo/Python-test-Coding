@@ -84,7 +84,7 @@ data = """1 ADANA
 satirlar = data.strip().splitlines()
 
 
-
+"""
 sehirler = []
 
 
@@ -93,7 +93,18 @@ for satir in satirlar:
     if parcalar[0].isdigit():
         sehirler.append(parcalar[1])
     else:
+        sehirler.append(satir.strip())"""
+
+sehirler = []
+
+for satir in satirlar:
+    parcalar = satir.strip().split(maxsplit=1)
+    if parcalar[0].isdigit():
+        sehirler.append(parcalar[1])
+    else:
         sehirler.append(satir.strip())
+
+        
 
 
 for sehir in sehirler:
