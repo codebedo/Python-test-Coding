@@ -104,7 +104,14 @@ for satir in satirlar:
     else:
         sehirler.append(satir.strip())
 
-        
+
+citys = []
+for row in  satirlar:
+    splt = splt.strip().split(maxsplit=1)
+    if splt[0].isdigit():
+        citys.append(splt[1])
+    else:
+        citys.append(row.strip())
 
 
 for sehir in sehirler:
