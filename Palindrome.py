@@ -1,26 +1,20 @@
-class Solution(object):
-    def isPalindrome(self,x):
-        self.x = x
-        original = self.x
+class Solution:
+     def polindrome(self, num):
+        self.num = num
+
+        i = num
+
         reversed = 0
 
-        while(x > 0):
-            reversed = reversed * 10 + (x%10)
-            x//= 10
+        while i > 0:
+            remainder = i % 10
+            reversed = remainder + (reversed * 10)
+            i = i // 10
+        if num == reversed:
+            print(f"{self.num} is a palindrome number ")
 
-        if reversed == original:
-            print(f"{self.x} is a palindrome")
         else:
-            print(f"{self.x} reserved {reversed} thi end this is not palindrome")
-
-
-
-
-
+            print("sorry mate this is not")
 
 k1 = Solution()
-
-k1.isPalindrome(123)
-
-
-
+k1.polindrome(121)
