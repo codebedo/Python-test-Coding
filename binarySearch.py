@@ -71,16 +71,15 @@ def binarySearch(arr, low, high, x):
         return -1
     """
     if high >= low:
-        mid = low + (high -low) //2
+        mid = low +(high -low) //2
 
         if arr[mid] == x:
+            return  mid
 
-            return mid
-        elif arr[mid] > x:
-            return binarySearch(arr,low, mid -1, x)
-
+        elif arr[mid] < x:
+            return binarySearch(arr, mid + 1, high, x)
         else:
-            return binarySearch(arr, mid+1, high, x)
+            return  binarySearch(arr, low, mid -1 , x)
 
 
 
