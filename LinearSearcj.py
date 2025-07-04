@@ -4,13 +4,30 @@ def linear_search(arr: int, key: int) -> int :
         if num == key:
             return index
 
-    return -1"""
+    return -1
 
 def linear_search(arr: int, key: int) -> int:
     for index, num in enumerate(arr):
         if num == key:
             return index
 
+
+    return -1
+
+
+
+
+def linear_search(arr: int , key: int) -> int:
+    for index, num in enumerate(arr):
+        if num == key:
+            return index
+
+
+    return -1"""
+def linear_search(arr: int, key: int) -> int:
+    for index, num in enumerate(arr):
+        if num == key:
+            return  index
 
     return -1
 
