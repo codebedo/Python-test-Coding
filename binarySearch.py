@@ -51,7 +51,7 @@ def binarySearch(arr, low, high, x):
 
     else:
         return -1
-    """
+
     if high >= low:
         mid = low + (high -low) //2
 
@@ -69,6 +69,20 @@ def binarySearch(arr, low, high, x):
 
     else:
         return -1
+    """
+    if high >= low:
+        mid = low + (high -low) //2
+
+        if arr[mid] == x:
+
+            return mid
+        elif arr[mid] > x:
+            return binarySearch(arr,low, mid -1, x)
+
+        else:
+            return binarySearch(arr, mid+1, high, x)
+
+
 
 
 # Driver Code
@@ -76,7 +90,7 @@ def binarySearch(arr, low, high, x):
 if __name__ == '__main__':
     arr = [2,3,4,10,40]
 
-    x = 50
+    x = 3
 
 
     # function call
