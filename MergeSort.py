@@ -13,9 +13,10 @@ def merge_sort(arr):
     # arr[mid:] -> mide olan kısmı al diyor ve geçici bir dize oluştur.
 
     left_half = merge_sort(arr[mid:])
+    print(left_half,"\n")
 
     right_half = merge_sort(arr[:mid])
-
+    print(right_half,"\n")
 
     # sıralı iki yarıyı birleştir ve sonucu döndür
 
@@ -36,8 +37,8 @@ def merge(left, right):
             i += 1
         else:
         # aksi haklde sağ dizideki eleman daha küçükk veya eşittir, onu ekle
-             merged.append(right[j])
-
+            merged.append(right[j])
+            j += 1
 
     # sol dizide kalan elemanları ekle (eğer varsa)
     merged.extend(left[i:])
@@ -49,3 +50,10 @@ def merge(left, right):
     # Birleştirillmmiş sıralı diziyi döndğr
 
     return merged
+
+arr = [545,12,56,78,520,32,45,75,12,54,879]
+
+
+sorted_arr  = merge_sort(arr)
+
+print("Sıralı liste" , sorted_arr)
