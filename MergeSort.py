@@ -1,42 +1,51 @@
 def merge_sort(arr):
+    # eğer dizemiz 1 veya 0 elemanlıysa , zaten sıralıdır, olduğu gibi döndürülür.
+
     if len(arr) <= 1:
         return arr
 
 
-    # 1. bölme
+    # diziyi ortadan ikiye bölüceğiz bunun içinde ortayı bulmak gerekir.
     mid = len(arr) //2
-    left_half = merge_sort(arr[:mid])
-    right_half = merge_sort(arr[mid:])
 
 
-    # 2. birleştirme
-    return merge(left_half, right_half)
+    # sol yarısını reürsif olarak sırala
+    # arr[mid:] -> mide olan kısmı al diyor ve geçici bir dize oluştur.
+
+    left_half = merge_sort(arr[mid:])
+
+    right_half = merge_sort(arr[:mid])
+
+
+    # sıralı iki yarıyı birleştir ve sonucu döndür
+
+    return merge(left_half,  right_half)
 
 def merge(left, right):
+    # birleştirilmiş sonucu tutacak dizi
     merged = []
 
+    # sol ve sağ dizilerdeki indeksleri takip etmek için
     i = j = 0
 
-
-    # Karşılaştırarak birleştirme
+    # her iki dizide de karşılaştırılacak eleman olduğu  sürece devam et
     while i < len(left) and j < len(right):
+        # sol dizideki eleman küçükse , onu ekle ve sol indeks ilerlet
         if left[i] < right[j]:
             merged.append(left[i])
             i += 1
         else:
-            merged.append(right[j])
-            j += 1
+        # aksi haklde sağ dizideki eleman daha küçükk veya eşittir, onu ekle
+             merged.append(right[j])
 
 
-    # kalanları ekleme
+    # sol dizide kalan elemanları ekle (eğer varsa)
     merged.extend(left[i:])
+
+    # sağ dizide kalan elemanları ekle (eğer varsa)
+
     merged.extend(right[j:])
 
-    return  merged
-# test
+    # Birleştirillmmiş sıralı diziyi döndğr
 
-
-
-arr = [38,27,43,3,9, 82,10]
-sorted_arr = merge_sort(arr)
-print("Sıralı liste: ", sorted_arr)
+    return merged
