@@ -18,8 +18,15 @@ efficent_spells = sorted(
 
 
 for s in efficent_spells:
-    print(f'{s[0]}: {s[1] / s[2]}')"""
+    print(f'{s[0]}: {s[1] / s[2]}')
 
 
 x = lambda a : a + 10
-print(x(5))
+print(x(5))"""
+
+
+def myfunc(n):
+    return lambda a : a * n
+mydoubler = myfunc(2)
+
+print(mydoubler(11))
