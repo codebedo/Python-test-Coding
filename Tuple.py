@@ -19,9 +19,18 @@ print(coords)
 
 #a= [1,2] # if we changing [] -> () like this they sharing the memorys
 #b = [2,2]
-
+"""
 a = (1,2)
 b = (2,2)
 
 print(id(a)) #id memory pointer
-print(id(b))
+print(id(b))"""
+
+# Packing  & unpaciking
+
+a, b, c = (1, 2, 3)
+print(a)
+print(b)
+print(c)
+nums  = a, b, c
+print(nums)
