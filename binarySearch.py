@@ -32,8 +32,8 @@ else:
 # Binary Search With recursive method
 
 
-def binarySearch(arr, low, high, x):
-    """
+#def binarySearch(arr, low, high, x):
+"""
     if high >= low:
         mid = low + (high - low) // 2
 
@@ -69,7 +69,7 @@ def binarySearch(arr, low, high, x):
 
     else:
         return -1
-    """
+    
     if high >= low:
         mid = low +(high -low) //2
 
@@ -81,8 +81,22 @@ def binarySearch(arr, low, high, x):
         else:
             return  binarySearch(arr, low, mid -1 , x)
 
+"""
+"""
+def binarySearch(arr, low, high,x):
 
+    if high >= low:
+        mid = low +(high -low) //2
 
+        if arr[mid] == x:
+            return mid
+
+        elif arr[mid] < x:
+            return binarySearch(arr, mid + 1, high, x)
+        else:
+            return binarySearch(arr, low, mid -1, x)
+    else:
+        return -1
 
 # Driver Code
 
@@ -99,4 +113,31 @@ if __name__ == '__main__':
         print("Element is present at index", result)
     else:
         print("Element is not present in array")
+"""
 
+
+def binarySearch(arr, low, high, x):
+
+    if high >= low:
+        mid = low + (high - low) //2
+        if arr[mid] == x:
+            return  mid
+        elif arr[mid] < x:
+            return  binarySearch(arr , mid + 1 , high, x)
+        else:
+            return binarySearch(arr, low, mid - 1, x)
+
+    else:
+        return -1
+
+
+if __name__ == '__main__':
+    arr = [12,25,78,95,36]
+    x = 78
+
+    result = binarySearch(arr, 0, len(arr) -1 ,x)
+
+    if result != -1:
+        print(f"Element is present index", result)
+    else:
+        print("element is not found")
