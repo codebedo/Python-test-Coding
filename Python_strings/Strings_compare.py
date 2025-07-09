@@ -1,21 +1,15 @@
-word1 = "flower"
-word2 = "flow"
+word3 = "interview"
+word4 = "internet"
 
+j = 0
+dfchar = 0
 
-for i in range(min(len(word1), len(word2))):
-    print(f"{word1[i]} vs {word2[i]}")
-    if word1[i] != word2[i]:
-        print("Farkli karakter bulundu!")
-    break
+while j < min(len(word3), len(word4)):
+    if word3[j] == word4[j]:
+        print(f" aynı karkaterler {word3[j]} vs {word4[j]}")
+    else:
+        print(f"farklı karkaterler {word3[j]} ve {word4[j]}")
 
+    j += 1
 
-word3 = "aplle"
-word4 = "apricot"
-
-
-for i in range(max(len(word3), len(word4))):
-    print(f"{word3[i]} vs {word4[i]}")
-    if word3[i] != word4[i]:
-        print("What we have here")
-
-    break
+print(f"aynı karkater sözcüğü : {word4[:j]} ve {word3[:j]}")
